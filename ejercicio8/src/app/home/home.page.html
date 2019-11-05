@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Flash</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-button *ngIf="hasFlash" (click)="!flashOn ? encenderFlash() : apagarFlash()">
+      {{ !flashOn ? "Encender flash" : "Apagar flash" }}
+    </ion-button>
+    <p *ngIf="!hasFlash" style="color: red;">El dispositivo no tiene flash</p>
+  </div>
+</ion-content>
